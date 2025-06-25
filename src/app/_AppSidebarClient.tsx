@@ -14,6 +14,7 @@ export function AppSidebarClient({ children }: { children: ReactNode }) {
           <SidebarTrigger />
           <span className='text-xl'>WebDev Jobs</span>
         </div>
+        <div className='flex-1 flex'>{children}</div>
       </div>
     );
   }
