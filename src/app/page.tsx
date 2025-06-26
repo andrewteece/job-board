@@ -10,6 +10,9 @@ import {
   SidebarTrigger,
 } from '@/components/ui/sidebar';
 import { AppSidebarClient } from './_AppSidebarClient';
+import Link from 'next/link';
+import { LogInIcon } from 'lucide-react';
+import { SignedIn } from '@clerk/nextjs';
 
 export default function HomePage() {
   return (
@@ -23,9 +26,16 @@ export default function HomePage() {
           <SidebarContent>test</SidebarContent>
           <SidebarFooter>
             <SidebarMenu>
-              <SidebarMenuItem>
-                <SidebarMenuButton>123</SidebarMenuButton>
-              </SidebarMenuItem>
+              <SignedIn>
+                <SidebarMenuItem>
+                  <SidebarMenuButton asChild>
+                    <Link href='/sign-in'>
+                      <LogInIcon />
+                      <span>Log In</span>
+                    </Link>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              </SignedIn>
             </SidebarMenu>
           </SidebarFooter>
         </Sidebar>
