@@ -5,7 +5,7 @@ import { useIsMobile } from '@/hooks/use-mobile';
 import { ReactNode } from 'react';
 
 export function AppSidebarClient({ children }: { children: ReactNode }) {
-  const isMobile = useIsMobile();
+  const { isMobile } = useIsMobile();
 
   if (isMobile) {
     return (

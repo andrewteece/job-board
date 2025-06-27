@@ -23,8 +23,9 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { User } from '@/types/user';
 
 export function SidebarUserButtonClient({ user }: { user: User }) {
-  const { isMobile, setOpenMobile } = useSidebar();
-  //   const { isMobile } = useIsMobile();
+  //   const { isMobile, setOpenMobile } = useSidebar();
+  const { setOpenMobile } = useSidebar();
+  const { isMobile } = useIsMobile();
   const { openUserProfile } = useClerk();
 
   return (
