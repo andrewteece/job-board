@@ -1,6 +1,6 @@
 'use client';
 
-import { SidebarMenuButton, useSidebar } from '@/components/ui/sidebar';
+import { SidebarMenuButton } from '@/components/ui/sidebar';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { SignOutButton } from '@/services/clerk/components/AuthButtons';
 import {
@@ -11,7 +11,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
 } from '@radix-ui/react-dropdown-menu';
-import { useClerk } from '@clerk/nextjs';
+// import { useClerk } from '@clerk/nextjs';
 import {
   ChevronsUpDown,
   LogOutIcon,
@@ -20,6 +20,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { User } from '@/types/user';
 
 export function SidebarUserButtonClient({
   user,
