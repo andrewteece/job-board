@@ -79,10 +79,12 @@ export function SidebarUserButtonClient({
 
 function UserInfo({ imageUrl, email, name }: User) {
   const nameInitials = name
-    .split(' ')
-    .slice(0, 2)
-    .map((str) => str[0])
-    .join('');
+    ? name
+        .split(' ')
+        .slice(0, 2)
+        .map((str) => str[0])
+        .join('')
+    : '??';
 
   return (
     <div className='flex items-center gap-2 overflow-hidden'>
