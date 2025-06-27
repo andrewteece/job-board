@@ -1,7 +1,7 @@
 'use client';
 
 import { SidebarMenuButton, useSidebar } from '@/components/ui/sidebar';
-// import { useIsMobile } from '@/hooks/use-mobile';
+import { useIsMobile } from '@/hooks/use-mobile';
 import { SignOutButton } from '@/services/clerk/components/AuthButtons';
 import {
   DropdownMenu,
@@ -22,19 +22,9 @@ import Link from 'next/link';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { User } from '@/types/user';
 
-// export function SidebarUserButtonClient({
-//   user,
-// }: {
-//   user: {
-//     name: string;
-//     imageUrl: string;
-//     email: string;
-//   };
-// }) {
-//   const { isMobile } = useIsMobile();
-
 export function SidebarUserButtonClient({ user }: { user: User }) {
   const { isMobile, setOpenMobile } = useSidebar();
+  //   const { isMobile } = useIsMobile();
   const { openUserProfile } = useClerk();
 
   return (
