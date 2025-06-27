@@ -15,6 +15,7 @@ import Link from 'next/link';
 import { LogInIcon } from 'lucide-react';
 // import { SignedIn, SignedOut } from '@clerk/nextjs';
 import { SignedOut } from '@/services/clerk/components/SignInStatus';
+import { SidebarUserButton } from '@/features/users/components/SidebarUserButton';
 
 export default function HomePage() {
   return (
@@ -44,7 +45,7 @@ export default function HomePage() {
           <SidebarFooter>
             <SidebarMenu>
               <SidebarMenuItem>
-                <SidebarMenuButton></SidebarMenuButton>
+                <SidebarUserButton></SidebarUserButton>
               </SidebarMenuItem>
             </SidebarMenu>
           </SidebarFooter>

@@ -3,6 +3,7 @@ import { SignOutButton } from '@clerk/nextjs';
 import { LogOutIcon } from 'lucide-react';
 import { Suspense } from 'react';
 import { getCurrentUser } from '@/services/clerk/lib/getCurrentAuth';
+import { SidebarUserButtonClient } from './_SidebarUserButtonClient';
 
 export function SidebarUserButton() {
   return (
