@@ -19,6 +19,7 @@ import {
   UserIcon,
 } from 'lucide-react';
 import Link from 'next/link';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 export function SidebarUserButtonClient({
   user,
