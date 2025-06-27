@@ -25,4 +25,6 @@ async function SidebarUserSuspense() {
       </SignOutButton>
     );
   }
+
+  return <SidebarUserButtonClient user={user} />;
 }
