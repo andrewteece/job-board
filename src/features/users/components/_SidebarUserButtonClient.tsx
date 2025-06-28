@@ -1,7 +1,6 @@
 'use client';
 
 import { SidebarMenuButton, useSidebar } from '@/components/ui/sidebar';
-import { useIsMobile } from '@/hooks/use-mobile';
 import { SignOutButton } from '@/services/clerk/components/AuthButtons';
 import {
   DropdownMenu,
@@ -24,8 +23,8 @@ import { User } from '@/types/user';
 
 export function SidebarUserButtonClient({ user }: { user: User }) {
   //   const { isMobile, setOpenMobile } = useSidebar();
-  const { setOpenMobile } = useSidebar();
-  const { isMobile } = useIsMobile();
+  //   const { setOpenMobile } = useSidebar();
+  const { isMobile, setOpenMobile } = useSidebar();
   const { openUserProfile } = useClerk();
 
   return (
@@ -43,7 +42,8 @@ export function SidebarUserButtonClient({ user }: { user: User }) {
         sideOffset={4}
         align='end'
         side={isMobile ? 'bottom' : 'right'}
-        className='min-w-64 max-w-80'
+        className='min-w-64 max-w-80 bg-white border'
+        // style={{ display: 'block', position: 'absolute', zIndex: 9999 }}
       >
         <DropdownMenuLabel className='font-normal p-1'>
           <UserInfo {...user} />
