@@ -2,7 +2,7 @@ import { env } from '@/data/env/server';
 import { NonRetriableError } from 'inngest';
 import { inngest } from '../client';
 import { Webhook } from 'svix';
-import { deleteUser, insertUser, updateUser } from '@/features/users/users';
+import { deleteUser, insertUser, updateUser } from '@/features/users/db/users';
 import { insertUserNotificationSettings } from '@/features/users/db/userNotificationSettings';
 import {
   deleteOrganization,
@@ -12,7 +12,7 @@ import {
 import {
   deleteOrganizationUserSettings,
   insertOrganizationUserSettings,
-} from '@/features/organizations/db/organizationUserSettings';
+} from '@/features/organizations/db/organizationSettings';
 
 function verifyWebhook({
   raw,
