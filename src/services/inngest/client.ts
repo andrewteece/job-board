@@ -1,3 +1,4 @@
+import { DeletedObjectJSON, UserJSON } from '@clerk/nextjs/server';
 import { EventSchemas, Inngest } from 'inngest';
 
 type ClerkWebhookData<T> = {

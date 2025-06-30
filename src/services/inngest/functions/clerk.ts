@@ -12,7 +12,7 @@ import {
 import {
   deleteOrganizationUserSettings,
   insertOrganizationUserSettings,
-} from '@/features/organizations/db/organizationSettings';
+} from '@/features/organizations/db/organizationUserSettings';
 
 function verifyWebhook({
   raw,
@@ -39,7 +39,7 @@ export const clerkCreateUser = inngest.createFunction(
     const userId = await step.run('create-user', async () => {
       const userData = event.data.data;
       const email = userData.email_addresses.find(
-        (email) => email.id === userData.primary_email_id
+        (email) => email.id === userData.primary_email_address_id
       );
 
       if (email == null) {

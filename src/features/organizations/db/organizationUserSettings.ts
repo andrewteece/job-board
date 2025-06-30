@@ -1,6 +1,6 @@
 import { db } from '@/drizzle/db';
 import { OrganizationUserSettingsTable } from '@/drizzle/schema';
-import { revalidateOrganizationUserSettingsCache } from './cache/organizationUserSettings';
+// import { revalidateOrganizationUserSettingsCache } from './cache/organizationUserSettings';
 import { and, eq } from 'drizzle-orm';
 
 export async function insertOrganizationUserSettings(
