@@ -10,7 +10,7 @@ import {
   SidebarTrigger,
   SidebarGroup,
 } from '@/components/ui/sidebar';
-import { AppSidebarClient } from './_AppSidebarClient';
+import { AppSidebarClient } from '../components/sidebar/_AppSidebarClient';
 import Link from 'next/link';
 import { LogInIcon } from 'lucide-react';
 // import { SignedIn, SignedOut } from '@clerk/nextjs';
